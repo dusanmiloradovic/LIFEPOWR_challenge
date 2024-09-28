@@ -92,7 +92,6 @@ export class Controller {
   ): Promise<void> {
     // This should handle any temporary network disconnections and retry until tryUntil is reached
     // and only then it throws an error
-    // TODO write a test for this
     try {
       await this.triggerExpectedPower(kwPower);
       await this.logRegisters();
@@ -133,7 +132,7 @@ export class Controller {
       try {
         await this.triggerExpectedPowerAndDelayReturn(val);
       } catch (err) {
-        console.error(err); // TODO put this into logger
+        console.error(err);
       }
     }
   }

@@ -1,5 +1,5 @@
+/* eslint-disable @typescript-eslint/no-this-alias */
 import { Logger, RegisterValueRecord } from "./types";
-import { RegisterName } from "../registers/types";
 import ipc from "node-ipc";
 
 ipc.config.silent = true;
@@ -37,11 +37,7 @@ export class IPCLogger implements Logger {
     ipc.disconnect("chartServer");
   }
 
-  async writeError(
-    timestamp: number,
-    registerName: RegisterName,
-    value: Error,
-  ): Promise<void> {
+  async writeError(): Promise<void> {
     return Promise.resolve(undefined);
   }
 

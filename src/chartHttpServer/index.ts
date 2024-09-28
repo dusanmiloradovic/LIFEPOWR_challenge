@@ -25,10 +25,10 @@ function streamProfileRecord(profileRecord: ProfileRecord) {
 }
 
 ipc.serve(function () {
-  ipc.server.on("start.profile", function (data, socket) {
+  ipc.server.on("start.profile", function (data) {
     profileData[data] = [];
   });
-  ipc.server.on("app.message", function (data, socket) {
+  ipc.server.on("app.message", function (data) {
     const profileRecord = data.message as ProfileRecord;
     let profileArr = profileData[profileRecord?.profileName] as ProfileRecord[];
     if (!profileArr) {
