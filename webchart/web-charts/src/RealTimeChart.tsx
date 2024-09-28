@@ -81,7 +81,9 @@ export default function RealTimeChart() {
     setChosenProfile(profiles[0]);
   }
   if (Object.keys(state.current).length === 0) {
-    return null;
+    return (
+      <h1>No data available yet, start the script and refresh the page</h1>
+    );
   }
 
   const profileLog = chosenProfile ? state.current[chosenProfile] : [];
