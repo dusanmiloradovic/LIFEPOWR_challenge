@@ -1,0 +1,39 @@
+{
+  "name": "lifepowr_challenge",
+  "version": "1.0.0",
+  "main": "src/index.ts",
+  "scripts": {
+    "lint": "eslint",
+    "test": "jest",
+    "test1": "ts-node scripts/test1.ts",
+    "loadPowerProfiles": "ts-node scripts/loadPowerProfiles.ts",
+    "chart-server": "ts-node src/chartHttpServer/index.ts",
+    "build": "tsc"
+  },
+  "author": "Dusan Miloradovic",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@eslint/js": "^9.11.1",
+    "@types/dockerode": "^3.3.31",
+    "@types/express": "^5.0.0",
+    "@types/jest": "^29.5.13",
+    "@types/node": "^22.6.1",
+    "@types/node-ipc": "^9.2.3",
+    "dockerode": "^4.0.2",
+    "eslint": "^9.11.1",
+    "globals": "^15.9.0",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.2.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.2",
+    "typescript-eslint": "^8.7.0"
+  },
+  "dependencies": {
+    "@achrinza/node-ipc": "^10.1.11",
+    "csv": "^6.3.10",
+    "express": "^4.21.0",
+    "modbus-serial": "^8.0.17",
+    "node-ipc": "npm:@achrinza/node-ipc@10.1.11"
+  }
+}
