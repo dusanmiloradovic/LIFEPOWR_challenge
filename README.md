@@ -1,4 +1,6 @@
 # LIFEPOWR Technical challenge
+Before running the script, ensure the docker image is available locally:  
+```docker pull  public.ecr.aws/k1u2a6n3/lp_ev_emulator:latest```
 
 ## Running the script with power profiles
 
